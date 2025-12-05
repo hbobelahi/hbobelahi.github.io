@@ -59,3 +59,53 @@ footer {
   font-size: 14px;
   color: #777;
 }
+
+.about-section {
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.about-text h2 {
+  margin-top: 0;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 22px;
+  background-color: #DDBE8F;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.resume-btn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-photo {
+    margin: auto;
+  }
+}
