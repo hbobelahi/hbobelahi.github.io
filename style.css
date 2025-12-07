@@ -218,11 +218,13 @@ footer {
   background: #fdfdfd;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: center; /* وسط‌چین کردن همه محتوای فرم */
 }
 
 .order-section form {
   display: flex;
   flex-direction: column;
+  align-items: center; /* وسط‌چین کردن فیلدها */
 }
 
 .order-section label {
@@ -231,12 +233,16 @@ footer {
 }
 
 .order-section input,
-.order-section textarea {
+.order-section textarea,
+.order-section select {
   padding: 10px;
   margin-top: 5px;
   border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  width: 80%; /* عرض استاندارد برای همه فیلدها */
+  max-width: 400px;
+  text-align: right; /* تایپ فارسی درست باشه */
 }
 
 .order-section textarea {
@@ -245,7 +251,7 @@ footer {
 
 .order-section button {
   margin-top: 20px;
-  padding: 12px;
+  padding: 12px 25px;
   border: none;
   border-radius: 12px;
   background-color: #DDBE8F;
@@ -265,6 +271,7 @@ footer {
   border-radius: 12px;
   padding: 15px;
   margin-top: 20px;
+  text-align: center; /* وسط‌چین کردن محصولات */
 }
 
 .order-section legend {
