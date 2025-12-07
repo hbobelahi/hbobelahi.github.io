@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>سفارش محصولات — Hawa Elahi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>سفارش محصولات</h1>
+  <p class="subtitle">فرم ثبت سفارش و فاکتور</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#">Eu-genica</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="order-section">
+  <form action="https://formsubmit.co/hbobelahi@icloud.com" method="POST" target="_blank">
+
+    <!-- شماره سفارش خودکار -->
+    <label for="orderNumber">شماره سفارش:</label>
+    <input type="text" id="orderNumber" name="orderNumber" readonly>
+
+    <!-- محصولات -->
+    <fieldset>
+      <legend>محصولات</legend>
+      <label><input type="checkbox" name="products" value="جلد اول رمان"> جلد اول رمان</label>
+      <label>تعداد: <input type="number" name="qty_book1" min="0" value="0"></label><br>
+      
+      <label><input type="checkbox" name="products" value="جلد دوم رمان"> جلد دوم رمان</label>
+      <label>تعداد: <input type="number" name="qty_book2" min="0" value="0"></label><br>
+      
+      <label><input type="checkbox" name="products" value="استیکر"> استیکر</label>
+      <label>تعداد: <input type="number" name="qty_sticker" min="0" value="0"></label><br>
+      
+      <label><input type="checkbox" name="products" value="بوکمارک"> بوکمارک</label>
+      <label>تعداد: <input type="number" name="qty_bookmark" min="0" value="0"></label><br>
+    </fieldset>
+
+    <!-- اطلاعات مشتری -->
+    <label for="fullName">نام و نام خانوادگی:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="mobile">شماره موبایل:</label>
+    <input type="text" id="mobile" name="mobile" required>
+
+    <label for="province">استان:</label>
+    <input type="text" id="province" name="province" required>
+
+    <label for="city">شهر:</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="address">آدرس دقیق:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="postalCode">کد پستی ده رقمی:</label>
+    <input type="text" id="postalCode" name="postalCode" pattern="\d{10}" required>
+
+    <!-- دکمه‌ها -->
+    <button type="submit">ارسال و رفتن به پرداخت</button>
+    <button type="button" onclick="window.print()">چاپ فاکتور</button>
+  </form>
+</section>
+
+<script>
+  // تولید شماره سفارش رندوم 5 رقمی
+  function generateOrderNumber() {
+    return Math.floor(10000 + Math.random() * 90000);
+  }
+  document.getElementById("orderNumber").value = generateOrderNumber();
+</script>
+
+</body>
+</html>
