@@ -5,6 +5,79 @@
   <title>سفارش محصولات — Hawa Elahi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Order Page Styles */
+    .order-section {
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: auto;
+      background: #fdfdfd;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .order-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .order-section label {
+      margin-top: 15px;
+      font-weight: 500;
+    }
+
+    .order-section input,
+    .order-section textarea,
+    .order-section select {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 80%;
+      max-width: 400px;
+      text-align: right;
+    }
+
+    .order-section textarea {
+      resize: vertical;
+    }
+
+    .order-section button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      background-color: #DDBE8F;
+      color: #333;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .order-section button:hover {
+      opacity: 0.85;
+    }
+
+    .order-section fieldset {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 15px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .order-section legend {
+      font-weight: 600;
+      padding: 0 10px;
+    }
+
+    .order-section input[type="checkbox"] {
+      margin-right: 8px;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,6 +97,8 @@
 
 <section class="order-section">
   <form action="https://formsubmit.co/hbobelahi@icloud.com" method="POST" target="_blank">
+    <!-- redirect به زرین‌پال -->
+    <input type="hidden" name="_next" value="https://your-zarinpal-link.com">
 
     <!-- شماره سفارش خودکار -->
     <label for="orderNumber">شماره سفارش:</label>
@@ -48,6 +123,9 @@
     <!-- اطلاعات مشتری -->
     <label for="fullName">نام و نام خانوادگی:</label>
     <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">ایمیل:</label>
+    <input type="email" id="email" name="email" required>
 
     <label for="mobile">شماره موبایل:</label>
     <input type="text" id="mobile" name="mobile" required>
