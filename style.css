@@ -209,3 +209,69 @@ footer {
     text-align: center;
   }
 }
+
+/* Order Page Styles */
+.order-section {
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: auto;
+  background: #fdfdfd;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.order-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-section label {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.order-section input,
+.order-section textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.order-section textarea {
+  resize: vertical;
+}
+
+.order-section button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #DDBE8F;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.order-section button:hover {
+  opacity: 0.85;
+}
+
+/* Fieldset styles for products */
+.order-section fieldset {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.order-section legend {
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.order-section input[type="checkbox"] {
+  margin-right: 8px;
+}
