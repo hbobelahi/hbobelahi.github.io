@@ -282,3 +282,28 @@ footer {
 .order-section input[type="checkbox"] {
   margin-right: 8px;
 }
+
+.shop-footer {
+    margin-top: 100px;
+    padding: 50px 20px;
+    background-color: #fafafa;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.shop-footer-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.enamad-logo {
+    height: 130px; /* درشت و واضح */
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.shop-footer-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
